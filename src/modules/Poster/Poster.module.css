@@ -1,0 +1,28 @@
+.container {
+  border: 2px double black;
+  padding: 40px 10px 10px;
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  background: var(--color-bg);
+  z-index: 1;
+  transition: 200ms ease-in-out;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    min-width: inherit;
+    width: calc(100% - 20px);
+  }
+}

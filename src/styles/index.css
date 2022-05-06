@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Smythe&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #b89869;
+  --color-button: #8e7146;
+  --color-border-button: #5a492f;
+  font-size: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--color-bg);
+  font-family: "Smythe", cursive;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Limelight", cursive;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+input,
+textarea {
+  outline: none;
+  padding: 10px;
+  border: 2px solid black;
+  background: #d8b581;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3),
+    inset -3px -3px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  outline: none;
+  padding: 10px;
+  border: 2px solid rgb(106, 76, 22);
+  background: var(--color-button);
+  color: var(--color-border-button);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+button:hover {
+  background: #83683f;
+  border: 2px solid rgb(59, 42, 11);
+  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/***  ---- submit button ****/
+
+.info {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  color: rgb(40, 40, 40);
+}
+
+.container__button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button_valid {
+  width: 100%;
+}
+.button_valid,
+.clock {
+  outline: none;
+  cursor: pointer;
+  background: var(--color-button);
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.button_valid,
+.clock {
+  background: var(--color-button);
+}
+
+.clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms ease-in-out;
+}
+
+.clock[data-clock="true"] {
+  border-radius: 50%;
+  border: 3px solid var(--color-border-button);
+  background: #d8b581;
+  box-shadow: inset 6px 3px 0 rgba(0, 0, 0, 0.07);
+}
+
+.clock[data-clock="true"]:before,
+.clock[data-clock="true"]:after {
+  content: "";
+  position: absolute;
+  background: var(--color-button);
+  height: 2px;
+  left: 50%;
+  border-radius: 10px;
+  transform-origin: 0;
+  opacity: 0;
+  top: calc(50% - 1px);
+}
+
+.clock[data-clock="true"]:before {
+  right: 5%;
+  animation: 1000ms 100ms linear clock infinite;
+}
+
+.clock[data-clock="true"]:after {
+  right: 10%;
+  animation: 5000ms 100ms linear clock infinite;
+}
+
+@keyframes clock {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

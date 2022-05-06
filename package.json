@@ -1,0 +1,32 @@
+{
+  "name": "morse",
+  "version": "0.0.1",
+  "description": "JS game",
+  "main": "main.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazerlelutin/jellyfish-game.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "game",
+    "squid",
+    "game",
+    "morse"
+  ],
+  "author": "kazerlelutin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazerlelutin/jellyfish-game/issues"
+  },
+  "homepage": "https://github.com/kazerlelutin/jellyfish-game#readme",
+  "devDependencies": {
+    "@snowpack/plugin-dotenv": "^2.2.0",
+    "snowpack": "^3.8.8"
+  }
+}
