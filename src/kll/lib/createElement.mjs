@@ -17,9 +17,7 @@ export default function createElement(
 
   if (attrs && typeof attrs === "object") {
     Object.keys(attrs).forEach((attr) => {
-      if (
-        attr.match(/on/)
-      ) {
+      if (attr.match(/on/)) {
         el.addEventListener(
           `${attr.toLowerCase().replace("on", "")}`,
           attrs[attr]
