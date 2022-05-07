@@ -20,8 +20,8 @@ const Poster = {
       Form,
       l({tag:'ul'},[
         l({tag:'li'},"N'oubliez pas la ponctuation"),
-        l({tag:'li'},".-.- : Début de message"),
-        l({tag:'li'},".-.-. : Fin de message")
+        l({tag:'li'},"Début de message : ▄ ▄▄▄ ▄ ▄▄▄"),
+        l({tag:'li'},"Fin de message: ▄ ▄▄▄ ▄ ▄▄▄ ▄ ")
       ] ),
     ]),
 };

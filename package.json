@@ -19,7 +19,11 @@
     "game",
     "morse"
   ],
-  "author": "kazerlelutin",
+  "author": {
+    "email": "b@bouteiller.contact",
+    "url": "https://ko-fi.com/kazerlelutin",
+    "name": "Kazerlelutin"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kazerlelutin/jellyfish-game/issues"
