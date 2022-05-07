@@ -5,6 +5,7 @@ import MyButton from "../MyButton/MyButton.mjs";
 import PosterResizeTitle from "./PosterResizeTitle.mjs";
 import Form from "../Form/Form.mjs";
 import Footer from "../Footer/Footer.mjs";
+import translator from "../../helpers/translator.mjs";
 
 const Poster = {
   onstart: () => {
@@ -17,10 +18,12 @@ const Poster = {
   view: () =>
     l({ classNames: classes.container }, [
       l({ tag: "h1", classNames: classes.title, id: "title" }, "morse"),
-      k(Signal),
+      Signal,
       Form,
       l({tag:'ul'},[
-        l({tag:'li'},"N'oubliez pas la ponctuation"),
+        l({tag:'li'},translator('The message is broadcast continuously')),
+        l({tag:'li'},translator('every day, a message to decode')),
+        
         l({tag:'li'},"Début de message : ▄ ▄▄▄ ▄ ▄▄▄"),
         l({tag:'li'},"Fin de message: ▄ ▄▄▄ ▄ ▄▄▄ ▄ ")
       ] ),

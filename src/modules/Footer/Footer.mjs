@@ -1,50 +1,56 @@
 import translator from "../../helpers/translator.mjs";
 import { k, l } from "../../kll/index.mjs";
+import About from "../About/About.mjs";
+import MorseInfo from "../MorseInfo/MorseInfo.mjs";
 import classes from "./Footer.module.css";
 
 const Footer = {
   state: {
     popup: undefined,
   },
+  Morse: k(MorseInfo),
   handleClick: (state, type) => {
     const comps = {
-      about: "comp about",
+      about: About,
+      morse:MorseInfo
     };
-    state.popup = "dodo";
+    state.popup = comps[type];
   },
   view: (state) =>
     l({ classNames: classes.container }, [
       l(
         {
           classNames: classes.item,
-          attrs: { onClick: () => Footer.handleClick(state, "code") },
+          attrs: { onClick: () => Footer.handleClick(state, "morse") },
         },
         translator("The morse code")
       ),
       l(
         {
           classNames: classes.item,
-          attrs: { onClick: () => Footer.handleClick(state, "code") },
+          attrs: { onClick: () => Footer.handleClick(state, "about") },
         },
-        translator("About")
-      ),
-      l(
-        {
-          classNames: classes.item,
-          attrs: { onClick: () => Footer.handleClick(state, "code") },
-        },
-        translator("About")
+        translator("about")
       ),
       state.popup
         ? l(
             { classNames: classes.popupContainer },
-            l(
-              {
-                classNames: classes.popup,
-                attrs: { onClick: () => (state.popup = undefined) },
-              },
-              "en cours (clic pour fermer)"
-            )
+              l(
+                {
+                  classNames: classes.popup,
+                },
+                [
+                  l(
+                    {
+                      classNames: classes.close,
+                      attrs: { onClick: () => (state.popup = undefined) },
+                    },
+                    "X"
+                  ),
+                  k(state.popup)
+                ]
+                
+              )
           )
         : null,
     ]),
