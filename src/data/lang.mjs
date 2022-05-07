@@ -23,6 +23,10 @@ const lang = {
         fr:'Le décodage a échoué...',
         eng:'Decoding failed...'
     },
+    'clic for disabled/enabled sound': {
+        fr:'Cliquez pour activer/désactiver le son',
+        en:'Clic for disabled/enabled sound'
+    },
     winMsg: {
         fr:'Vous avez décodé le message suivant',
         eng:'You have decoded the following message'

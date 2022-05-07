@@ -17,6 +17,7 @@
   box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.2),
     inset -5px -5px 20px rgba(0, 0, 0, 0.2);
   transition: 50ms ease-in-out;
+  cursor: pointer;
 }
 
 .signal[data-light="="] {

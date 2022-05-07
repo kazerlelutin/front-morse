@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popupContainer {
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    z-index: 5;
+}
+
+.popup {
+    border: 2px double black;
+    padding: 15px;
+    position: relative;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--color-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}

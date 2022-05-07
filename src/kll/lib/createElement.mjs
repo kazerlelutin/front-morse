@@ -35,7 +35,7 @@ export default function createElement(
 
   if (id) el.setAttribute("id", id);
 
-  if (content) {
+  if (content && content !== null) {
     const getContent = (elContent) => {
       if (
         typeof elContent === "object" &&
@@ -71,6 +71,7 @@ export default function createElement(
     };
     if (Array.isArray(content)) {
       content.forEach((c, index) => {
+        if(c === null)return;
         if (index > 0 && typeof c === "string") {
           const span = document.createElement("span");
           span.innerText = c;

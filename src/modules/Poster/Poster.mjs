@@ -4,6 +4,7 @@ import Signal from "../Signal/Signal.mjs";
 import MyButton from "../MyButton/MyButton.mjs";
 import PosterResizeTitle from "./PosterResizeTitle.mjs";
 import Form from "../Form/Form.mjs";
+import Footer from "../Footer/Footer.mjs";
 
 const Poster = {
   onstart: () => {
@@ -23,6 +24,7 @@ const Poster = {
         l({tag:'li'},"Début de message : ▄ ▄▄▄ ▄ ▄▄▄"),
         l({tag:'li'},"Fin de message: ▄ ▄▄▄ ▄ ▄▄▄ ▄ ")
       ] ),
+      Footer
     ]),
 };
 
