@@ -1,6 +1,6 @@
 {
   "name": "morse",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "JS game",
   "main": "main.js",
   "scripts": {
