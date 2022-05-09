@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Smythe&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Smythe&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,14 +15,14 @@ body {
   padding: 0;
   margin: 0;
   background: var(--color-bg);
-  font-family: "Smythe", cursive;
+  font-family: 'Smythe', cursive;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Limelight", cursive;
+  font-family: 'Limelight', cursive;
   margin: 0;
 }
 
@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 input,
@@ -70,8 +70,8 @@ button:hover {
 
 ul {
   padding-inline-start: 20px;
-  margin: 0
-} 
+  margin: 0;
+}
 
 a {
   color: rgb(30, 24, 11);
@@ -98,6 +98,7 @@ a:hover {
 .button_valid {
   width: 100%;
 }
+
 .button_valid,
 .clock {
   outline: none;
@@ -125,16 +126,16 @@ a:hover {
   transition: 300ms ease-in-out;
 }
 
-.clock[data-clock="true"] {
+.clock[data-clock='true'] {
   border-radius: 50%;
   border: 3px solid var(--color-border-button);
   background: #d8b581;
   box-shadow: inset 6px 3px 0 rgba(0, 0, 0, 0.07);
 }
 
-.clock[data-clock="true"]:before,
-.clock[data-clock="true"]:after {
-  content: "";
+.clock[data-clock='true']:before,
+.clock[data-clock='true']:after {
+  content: '';
   position: absolute;
   background: var(--color-button);
   height: 2px;
@@ -145,12 +146,12 @@ a:hover {
   top: calc(50% - 1px);
 }
 
-.clock[data-clock="true"]:before {
+.clock[data-clock='true']:before {
   right: 5%;
   animation: 1000ms 100ms linear clock infinite;
 }
 
-.clock[data-clock="true"]:after {
+.clock[data-clock='true']:after {
   right: 10%;
   animation: 5000ms 100ms linear clock infinite;
 }
