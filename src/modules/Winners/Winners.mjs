@@ -9,7 +9,7 @@ const Winners = {
   },
   onstart: async (state) => {
     const res = await fetch(import.meta.env.SNOWPACK_PUBLIC_API + "/winner");
-    state.winners = parseInt(await res.text());
+    state.winners = parseInt(await res.text()) || 0;
 
     socket.on("classment", (msg) => {
       state.winners = msg;

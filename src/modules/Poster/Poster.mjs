@@ -1,16 +1,12 @@
 import classes from "./Poster.module.css";
-import { l, k } from "kll";
+import { l } from "kll";
 import Signal from "../Signal/Signal.mjs";
-import MyButton from "../MyButton/MyButton.mjs";
 import PosterResizeTitle from "./PosterResizeTitle.mjs";
 import Form from "../Form/Form.mjs";
 import Footer from "../Footer/Footer.mjs";
 import translator from "../../helpers/translator.mjs";
 
 const Poster = {
-  onstart: () => {
-    Poster.Button = k(MyButton, Poster.state);
-  },
   onmount: (_state, _element) => {
     PosterResizeTitle();
     window.addEventListener("resize", PosterResizeTitle);
